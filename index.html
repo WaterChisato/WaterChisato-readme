@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN"> 
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WaterChisato</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <div class="container">
+    <h1>你好呀！陌生人！</h1>
+    <p>哈喽，我是水喝千束，一个普通的学生。</p>
+    <p>坐标在贵州贵阳。对信息技术以及ACG文化感兴趣。</p>
+    <p>生活中也是性格比较开放，但也经常自卑。</p>
+    <p>更多关于咱的信息请 <a href="#">点击这里</a>。</p>
+    <p>Welcome to my blog</p>
+
+    <h2># 战斗力</h2>
+    <div class="skill">
+      <span>HTML/CSS</span>
+      <div class="progress">
+        <div class="bar" style="width: 55%;"></div> 
+      </div>
+    </div>
+    <div class="skill">
+      <span>PHP</span>
+      <div class="progress">
+        <div class="bar" style="width: 30%;"></div> 
+      </div>
+    </div>
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="progress">
+        <div class="bar" style="width: 60%;"></div> 
+      </div>
+    </div>
+    <div class="skill">
+      <span>萌属性</span>
+      <div class="progress">
+        <div class="bar" style="width: 90%;"></div> 
+      </div>
+    </div>
+    <div class="skill">
+      <span>搞事情</span>
+      <div class="progress">
+        <div class="bar" style="width: 50%;"></div> 
+      </div>
+    </div>
+    <div class="skill">
+      <span>情感</span>
+      <div class="progress">
+        <div class="bar" style="width: 70%;"></div> 
+      </div>
+    </div>
+    <div class="skill">
+      <span>社交</span>
+      <div class="progress">
+        <div class="bar" style="width: 40%;"></div> 
+      </div>
+    </div>
+    <div class="skill">
+      <span>耐心</span>
+      <div class="progress">
+        <div class="bar" style="width: 60%;"></div> 
+      </div>
+    </div>
+    <div class="skill">
+      <span>世界</span>
+      <div class="progress">
+        <div class="bar" style="width: 40%;"></div> 
+      </div>
+    </div>
+
+    <h2># Website</h2>
+    <div class="website">
+      <a href="#" class="btn">博客</a>
+    </div>
+
+    <h2># 咱生活的地方</h2>
+   <div class="contact">
+  <!-- 替换为对应平台的实际链接 -->
+  <a href="https://qm.qq.com/cgi-bin/qm/qr?k=你的QQ链接参数" class="contact-btn" target="_blank">QQ</a>
+  <a href="https://space.bilibili.com/你的B站ID" class="contact-btn" target="_blank">哔哩哔哩</a>
+  <a href="https://t.me/你的纸飞机账号" class="contact-btn" target="_blank">纸飞机</a>
+  <a href="mailto:你的邮箱地址" class="contact-btn">邮箱</a>
+</div>
+
+    <h2># 其他</h2>
+<div class="other">
+  <a href="https://waterchisato.github.io/Friends" class="other-btn" target="_blank">朋友们</a>
+  <button class="other-btn" onclick="showNotification()">留言板</button>
+</div>
+
+<!-- 新增通知功能脚本 -->
+<script>
+// 调用浏览器通知
+function showNotification() {
+  // 检查浏览器是否支持通知
+  if ("Notification" in window) {
+    // 询问用户是否允许通知
+    if (Notification.permission === "granted") {
+      new Notification("此正在开发");
+    } else if (Notification.permission !== "denied") {
+      Notification.requestPermission().then(permission => {
+        if (permission === "granted") {
+          new Notification("此正在开发");
+        }
+      });
+    }
+  } else {
+    // 浏览器不支持通知时，用 alert 提示
+    alert("此正在开发");
+  }
+}
+</script>
